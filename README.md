@@ -3,3 +3,16 @@
 
 <a href ="https://play.google.com/store/apps/details?id=com.bimsina.re_walls"><img src ="https://play.google.com/intl/en/badges/images/generic/en_badge_web_generic.png"></a>
 
+What's been done?
+
+- [x] Fetch Wallpapers From your Favorite subreddits.
+- [x] Add your own subreddits.
+- [x] Set Image as Wallpaper.
+- [x] Download Image.
+- [x] Switch between 3 themes in runtime.
+
+What's left?
+- Apply Lockscreen Wallpaper.
+- Make the Wallpaper Apply method asynchronous.
+
+*If you would like to contribute , feel free and open a PR.*
