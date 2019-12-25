@@ -3,6 +3,8 @@
 
 <a href ="https://play.google.com/store/apps/details?id=com.bimsina.re_walls"><img src ="https://play.google.com/intl/en/badges/images/generic/en_badge_web_generic.png"></a>
 
+Initial code and design inspiration from [Chitr](https://github.com/divyanshub024/chitr) and [RetroMusicPlayer](https://github.com/h4h13/RetroMusicPlayer).
+
 What's been done?
 
 - [x] Fetch Wallpapers From your Favorite subreddits.
