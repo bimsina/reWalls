@@ -6,6 +6,7 @@ import 'ui/views/home.dart';
 import 'core/utils/constants.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   SharedPreferences.getInstance().then((prefs) {
     int theme = prefs.getInt('theme') ?? 1;
     runApp(
