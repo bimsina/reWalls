@@ -29,7 +29,7 @@ class ColButton extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Icon(
                 icon,
-                color: theme.textTheme.body1.color,
+                color: theme.textTheme.bodyText2.color,
               ),
             ),
             Text(title,
@@ -76,14 +76,15 @@ class _SubredditAddWidgetState extends State<SubredditAddWidget> {
                     padding: const EdgeInsets.only(right: 8.0),
                     child: Text(
                       'r/',
-                      style: themeData.textTheme.body2,
+                      style: themeData.textTheme.bodyText1,
                     ),
                   ),
                   Expanded(
                     child: TextFormField(
                       controller: subredditText,
                       keyboardType: TextInputType.text,
-                      style: TextStyle(color: themeData.textTheme.body2.color),
+                      style:
+                          TextStyle(color: themeData.textTheme.bodyText1.color),
                       decoration: InputDecoration(
                         hintText: 'Subreddit Name',
                         labelText: 'Enter the subreddit',
@@ -127,7 +128,7 @@ class _SubredditAddWidgetState extends State<SubredditAddWidget> {
                       padding: const EdgeInsets.only(left: 8.0),
                       child: Text(
                         'No such subreddit found!',
-                        style: themeData.textTheme.body2,
+                        style: themeData.textTheme.bodyText1,
                       ),
                     )
                   ])
@@ -138,7 +139,7 @@ class _SubredditAddWidgetState extends State<SubredditAddWidget> {
                 FlatButton(
                   child: Text(
                     'Cancel',
-                    style: themeData.textTheme.body2,
+                    style: themeData.textTheme.bodyText1,
                   ),
                   onPressed: () => Navigator.pop(context),
                 ),
@@ -147,7 +148,7 @@ class _SubredditAddWidgetState extends State<SubredditAddWidget> {
                         color: themeData.accentColor,
                         child: Text(
                           'Add',
-                          style: themeData.textTheme.body2
+                          style: themeData.textTheme.bodyText1
                               .copyWith(color: themeData.primaryColor),
                         ),
                         onPressed: () async {
@@ -212,13 +213,13 @@ class ErrorOccured extends StatelessWidget {
         children: <Widget>[
           Text(
             'Oops! something went wrong.',
-            style: _themeData.textTheme.body2,
+            style: _themeData.textTheme.bodyText1,
           ),
           RaisedButton(
             onPressed: onTap,
             color: _themeData.accentColor,
             child: Text('Retry',
-                style: _themeData.textTheme.body2.copyWith(
+                style: _themeData.textTheme.bodyText1.copyWith(
                   color: _themeData.primaryColor,
                 )),
           ),
@@ -239,7 +240,7 @@ class ShowSelectorWidget extends StatelessWidget {
     final ThemeData themeData = themeNotifier.getTheme();
     return ListTile(
       dense: true,
-      trailing: Icon(Icons.edit, color: themeData.textTheme.body2.color),
+      trailing: Icon(Icons.edit, color: themeData.textTheme.bodyText1.color),
       title: Text(title,
           maxLines: 2,
           overflow: TextOverflow.clip,

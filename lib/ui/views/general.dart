@@ -12,7 +12,10 @@ class GeneralScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: themeData.primaryColor,
-        title: Text(title,style: themeData.textTheme.body1,),
+        title: Text(
+          title,
+          style: themeData.textTheme.bodyText2,
+        ),
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,

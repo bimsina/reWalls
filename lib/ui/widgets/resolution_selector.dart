@@ -64,7 +64,8 @@ class _ResolutionSelectorState extends State<ResolutionSelector> {
                           borderRadius: BorderRadius.circular(40.0)),
                       child: Text(
                         list[index],
-                        style: themeData.textTheme.body2.copyWith(fontSize: 14),
+                        style: themeData.textTheme.bodyText1
+                            .copyWith(fontSize: 14),
                       )),
                 );
               },

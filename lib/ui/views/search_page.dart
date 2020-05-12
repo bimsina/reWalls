@@ -14,7 +14,7 @@ class WallpaperSearch extends SearchDelegate<void> {
         cursorColor: themeData.accentColor,
         primaryColor: themeData.primaryColor,
         textTheme: TextTheme(
-          title: themeData.textTheme.body2,
+          headline6: themeData.textTheme.bodyText1,
         ));
     assert(theme != null);
     return theme;
@@ -26,7 +26,7 @@ class WallpaperSearch extends SearchDelegate<void> {
       IconButton(
         icon: Icon(
           Icons.clear,
-          color: themeData.textTheme.body1.color,
+          color: themeData.textTheme.bodyText2.color,
         ),
         onPressed: () {
           query = '';
@@ -40,7 +40,7 @@ class WallpaperSearch extends SearchDelegate<void> {
     return IconButton(
       icon: Icon(
         Icons.arrow_back,
-        color: themeData.textTheme.body1.color,
+        color: themeData.textTheme.bodyText2.color,
       ),
       onPressed: () {
         close(context, null);
@@ -74,7 +74,7 @@ class WallpaperSearch extends SearchDelegate<void> {
               color: themeData.accentColor,
             ),
           ),
-          Text('Enter a term to search.', style: themeData.textTheme.body2)
+          Text('Enter a term to search.', style: themeData.textTheme.bodyText1)
         ],
       )),
     );

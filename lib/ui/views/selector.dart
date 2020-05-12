@@ -68,7 +68,7 @@ class _SelectorWidgetState extends State<SelectorWidget> {
             padding: const EdgeInsets.all(8.0),
             child: Text(
               'Filters : ',
-              style: widget.themeData.textTheme.body1,
+              style: widget.themeData.textTheme.bodyText2,
             ),
           ),
           Row(
@@ -92,10 +92,10 @@ class _SelectorWidgetState extends State<SelectorWidget> {
                           borderRadius: BorderRadius.circular(8.0)),
                       child: Text(
                         item,
-                        style: widget.themeData.textTheme.body2.copyWith(
+                        style: widget.themeData.textTheme.bodyText1.copyWith(
                             color: kfilterValues.indexOf(item) == filterSelected
                                 ? widget.themeData.accentColor
-                                : widget.themeData.textTheme.body2.color),
+                                : widget.themeData.textTheme.bodyText1.color),
                         textAlign: TextAlign.left,
                       ),
                     ),
@@ -113,7 +113,7 @@ class _SelectorWidgetState extends State<SelectorWidget> {
             padding: const EdgeInsets.all(8.0),
             child: Text(
               'Subreddits : ',
-              style: widget.themeData.textTheme.body1,
+              style: widget.themeData.textTheme.bodyText2,
             ),
           ),
           Expanded(
@@ -153,11 +153,13 @@ class _SelectorWidgetState extends State<SelectorWidget> {
                               borderRadius: BorderRadius.circular(8.0)),
                           child: Text(
                             'r/${subreddits[index]}',
-                            style: widget.themeData.textTheme.body2.copyWith(
-                                color: subredditSelected
-                                        .contains(subreddits[index])
-                                    ? widget.themeData.accentColor
-                                    : widget.themeData.textTheme.body1.color),
+                            style: widget.themeData.textTheme.bodyText1
+                                .copyWith(
+                                    color: subredditSelected
+                                            .contains(subreddits[index])
+                                        ? widget.themeData.accentColor
+                                        : widget.themeData.textTheme.bodyText2
+                                            .color),
                             textAlign: TextAlign.left,
                           ),
                         ),
@@ -171,7 +173,7 @@ class _SelectorWidgetState extends State<SelectorWidget> {
                 child: FlatButton(
                   child: Text(
                     'OK',
-                    style: widget.themeData.textTheme.body1
+                    style: widget.themeData.textTheme.bodyText2
                         .copyWith(color: widget.themeData.accentColor),
                   ),
                   onPressed: () {
@@ -188,7 +190,7 @@ class _SelectorWidgetState extends State<SelectorWidget> {
                 child: FlatButton(
                   child: Text(
                     'Cancel',
-                    style: widget.themeData.textTheme.body1
+                    style: widget.themeData.textTheme.bodyText2
                         .copyWith(color: widget.themeData.accentColor),
                   ),
                   onPressed: () {
