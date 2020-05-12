@@ -117,22 +117,25 @@ class ThemeChangerWidget extends StatelessWidget {
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
           title: Text('Select Theme', style: state.textTheme.body1),
-          content: ListView.builder(
-            shrinkWrap: true,
-            itemBuilder: (context, index) {
-              return RadioListTile(
-                value: index,
-                groupValue: themes.indexOf(state),
-                onChanged: (ind) {
-                  onThemeChanged(ind, stateData);
-                },
-                title: Text(
-                  string[index],
-                  style: state.textTheme.body2,
-                ),
-              );
-            },
-            itemCount: string.length,
+          content: Container(
+            width: 0.0,
+            child: ListView.builder(
+              shrinkWrap: true,
+              itemBuilder: (context, index) {
+                return RadioListTile(
+                  value: index,
+                  groupValue: themes.indexOf(state),
+                  onChanged: (ind) {
+                    onThemeChanged(ind, stateData);
+                  },
+                  title: Text(
+                    string[index],
+                    style: state.textTheme.body2,
+                  ),
+                );
+              },
+              itemCount: string.length,
+            ),
           )),
     );
   }
