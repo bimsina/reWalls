@@ -129,13 +129,13 @@ class _WallpaperPageState extends State<WallpaperPage>
         children: <Widget>[
           Text(
             currentPost.title,
-            style: themeData.textTheme.body1,
+            style: themeData.textTheme.bodyText2,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
           ),
           Text(
             'Posted on r/${currentPost.subreddit} by u/${currentPost.author}',
-            style: themeData.textTheme.body2,
+            style: themeData.textTheme.bodyText1,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
           ),
@@ -275,7 +275,7 @@ class _WallpaperPageState extends State<WallpaperPage>
                           child: IconButton(
                             icon: Icon(
                               Icons.arrow_back,
-                              color: themeData.textTheme.body1.color,
+                              color: themeData.textTheme.bodyText2.color,
                             ),
                             onPressed: () {
                               Navigator.pop(context);
@@ -287,7 +287,7 @@ class _WallpaperPageState extends State<WallpaperPage>
                             fit == BoxFit.contain
                                 ? Icons.fullscreen
                                 : Icons.fullscreen_exit,
-                            color: themeData.textTheme.body1.color,
+                            color: themeData.textTheme.bodyText2.color,
                           ),
                           onPressed: () {
                             if (fit == BoxFit.contain) {

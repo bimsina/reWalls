@@ -22,12 +22,12 @@ class _WebPageState extends State<WebPage> {
       appBar: AppBar(
         backgroundColor: themeData.primaryColor,
         leading: IconButton(
-            color: themeData.textTheme.body1.color,
+            color: themeData.textTheme.bodyText2.color,
             icon: Icon(Icons.close),
             onPressed: () => Navigator.pop(context)),
         title: Text(
           widget.title,
-          style: themeData.textTheme.body1,
+          style: themeData.textTheme.bodyText2,
         ),
       ),
       body: Container(

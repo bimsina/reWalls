@@ -38,13 +38,13 @@ class _HomePageState extends State<HomePage> {
         elevation: 0,
         title: Text(
           'reWalls',
-          style: state.textTheme.headline,
+          style: state.textTheme.headline5,
         ),
         actions: <Widget>[
           IconButton(
             icon: Icon(
               Icons.search,
-              color: state.textTheme.body1.color,
+              color: state.textTheme.bodyText2.color,
             ),
             onPressed: () => showSearch(
                 context: context, delegate: WallpaperSearch(themeData: state)),
@@ -71,7 +71,7 @@ class _HomePageState extends State<HomePage> {
       ),
       bottomNavigationBar: BottomNavyBar(
         selectedIndex: _selectedIndex,
-        unselectedColor: state.textTheme.body1.color,
+        unselectedColor: state.textTheme.bodyText2.color,
         onItemSelected: (index) {
           _pageController.jumpToPage(index);
         },
@@ -109,7 +109,7 @@ class _HomePageState extends State<HomePage> {
             elevation: 4,
             title: Text(
               'reWalls',
-              style: state.textTheme.headline,
+              style: state.textTheme.headline5,
             ),
             actions: <Widget>[
               IconButton(

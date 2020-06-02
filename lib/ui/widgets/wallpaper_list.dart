@@ -34,7 +34,7 @@ class _WallpaperListState extends State<WallpaperList> {
                 ),
                 Text(
                   'Seems like what you are looking for, is empty.',
-                  style: widget.themeData.textTheme.body2,
+                  style: widget.themeData.textTheme.bodyText1,
                 )
               ],
             ),

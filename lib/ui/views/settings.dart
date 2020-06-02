@@ -161,7 +161,7 @@ class CustomListTile extends StatelessWidget {
       ),
       title: Text(
         title,
-        style: state.textTheme.body2,
+        style: state.textTheme.bodyText1,
       ),
       subtitle: subtitle == null
           ? null

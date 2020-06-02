@@ -23,7 +23,7 @@ void showLoadingDialog(BuildContext context) {
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
                         'Please Wait....',
-                        style: state.textTheme.body1,
+                        style: state.textTheme.bodyText2,
                       ),
                     ),
                   ),
@@ -70,8 +70,8 @@ showConfirmationDialog(
       return AlertDialog(
         backgroundColor: state.primaryColor,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
-        title: Text('$title', style: state.textTheme.body1),
-        content: Text(content, style: state.textTheme.body2),
+        title: Text('$title', style: state.textTheme.bodyText2),
+        content: Text(content, style: state.textTheme.bodyText1),
         actions: <Widget>[
           FlatButton(
             child: Text('Yes', style: TextStyle(color: state.accentColor)),
@@ -116,7 +116,7 @@ class ThemeChangerWidget extends StatelessWidget {
           backgroundColor: state.primaryColor,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
-          title: Text('Select Theme', style: state.textTheme.body1),
+          title: Text('Select Theme', style: state.textTheme.bodyText2),
           content: Container(
             width: 0.0,
             child: ListView.builder(
@@ -130,7 +130,7 @@ class ThemeChangerWidget extends StatelessWidget {
                   },
                   title: Text(
                     string[index],
-                    style: state.textTheme.body2,
+                    style: state.textTheme.bodyText1,
                   ),
                 );
               },

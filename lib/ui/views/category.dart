@@ -72,7 +72,7 @@ class _CategoryState extends State<Category>
                         padding: const EdgeInsets.all(16.0),
                         child: Text(
                             "Couldn't find the subreddit that your'e looking for.\nTry adding your own subreddit by clicking the add button.",
-                            style: themeData.textTheme.body2),
+                            style: themeData.textTheme.bodyText1),
                       ),
                     )
                   : GridView.builder(
@@ -104,7 +104,7 @@ class _CategoryState extends State<Category>
                               child: Center(
                                 child: Text('r/${filtered[index]}',
                                     maxLines: 1,
-                                    style: themeData.textTheme.body2
+                                    style: themeData.textTheme.bodyText1
                                         .copyWith(color: Colors.white)),
                               ),
                             ),
@@ -129,16 +129,16 @@ class _CategoryState extends State<Category>
                     child: TextFormField(
                       controller: controller,
                       cursorColor: themeData.accentColor,
-                      style: themeData.textTheme.body2,
+                      style: themeData.textTheme.bodyText1,
                       decoration: InputDecoration(
                         icon: Icon(Icons.search,
-                            color: themeData.textTheme.body2.color
+                            color: themeData.textTheme.bodyText1.color
                                 .withOpacity(0.6)),
                         border: InputBorder.none,
                         hintText: 'What subreddit are you looking for?',
-                        hintStyle: themeData.textTheme.body2.copyWith(
-                          color:
-                              themeData.textTheme.body2.color.withOpacity(0.6),
+                        hintStyle: themeData.textTheme.bodyText1.copyWith(
+                          color: themeData.textTheme.bodyText1.color
+                              .withOpacity(0.6),
                         ),
                       ),
                     ),
@@ -154,11 +154,11 @@ class _CategoryState extends State<Category>
                       heroTag: 'add',
                       icon: Icon(
                         Icons.add,
-                        color: themeData.textTheme.body2.color,
+                        color: themeData.textTheme.bodyText1.color,
                       ),
                       label: Text(
                         'Add',
-                        style: themeData.textTheme.body2,
+                        style: themeData.textTheme.bodyText1,
                       ),
                       onPressed: () async {
                         String res = await showDialog(

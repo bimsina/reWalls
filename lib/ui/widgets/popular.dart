@@ -55,7 +55,7 @@ class _PopularWallpapersState extends State<PopularWallpapers>
                   ListTile(
                     dense: true,
                     trailing: Icon(Icons.edit,
-                        color: themeData.textTheme.body2.color),
+                        color: themeData.textTheme.bodyText1.color),
                     title: Text(
                         '${kfilterValues[dataState.selectedFilter]} on r/${dataState.selectedSubreddit.join(', ')}',
                         maxLines: 2,

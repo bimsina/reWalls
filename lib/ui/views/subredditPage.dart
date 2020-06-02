@@ -54,11 +54,11 @@ class _SubredditPageState extends State<SubredditPage> {
       appBar: AppBar(
         backgroundColor: widget.themeData.primaryColor,
         title: Text('r/${widget.subreddit}',
-            style: widget.themeData.textTheme.body1),
+            style: widget.themeData.textTheme.bodyText2),
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,
-            color: widget.themeData.textTheme.body2.color,
+            color: widget.themeData.textTheme.bodyText1.color,
           ),
           onPressed: () {
             Navigator.pop(context);
@@ -72,14 +72,14 @@ class _SubredditPageState extends State<SubredditPage> {
                   .copyWith(canvasColor: widget.themeData.primaryColor),
               child: DropdownButton<String>(
                 underline: Container(),
-                style: widget.themeData.textTheme.body2,
+                style: widget.themeData.textTheme.bodyText1,
                 value: filterValue,
                 items: kfilterValues.map((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
                     child: Text(
                       value,
-                      style: widget.themeData.textTheme.body2,
+                      style: widget.themeData.textTheme.bodyText1,
                     ),
                   );
                 }).toList(),
