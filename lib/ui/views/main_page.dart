@@ -25,12 +25,12 @@ class _MainBodyState extends State<MainBody>
       physics: BouncingScrollPhysics(),
       children: <Widget>[
         ChangeNotifierProvider(
-          builder: (_) =>
+          create: (_) =>
               CarouselWallpaperState(kdataFetchState.IS_LOADING, null),
           child: NewWallpapers(),
         ),
         ChangeNotifierProvider(
-          builder: (_) => GridWallpaperState(kdataFetchState.IS_LOADING, null),
+          create: (_) => GridWallpaperState(kdataFetchState.IS_LOADING, null),
           child: PopularWallpapers(),
         ),
       ],

@@ -57,8 +57,7 @@ class _WallpaperPageState extends State<WallpaperPage>
 
   void downloadImage() async {
     try {
-      PermissionStatus status = await PermissionHandler()
-          .checkPermissionStatus(PermissionGroup.storage);
+      PermissionStatus status = await Permission.storage.status;
 
       if (status == PermissionStatus.granted) {
         try {
@@ -81,10 +80,7 @@ class _WallpaperPageState extends State<WallpaperPage>
   }
 
   void askForPermission() async {
-    await PermissionHandler().requestPermissions([PermissionGroup.storage]);
-    PermissionStatus status = await PermissionHandler()
-        .checkPermissionStatus(PermissionGroup.storage);
-    if (status == PermissionStatus.granted) {
+    if (await Permission.storage.request().isGranted) {
       downloadImage();
     } else {
       showToast('Please grant storage permission.');
@@ -106,7 +102,6 @@ class _WallpaperPageState extends State<WallpaperPage>
       msg: content,
       toastLength: Toast.LENGTH_SHORT,
       gravity: ToastGravity.BOTTOM,
-      timeInSecForIos: 1,
       backgroundColor: Colors.black,
       textColor: Colors.white,
       fontSize: 16.0);

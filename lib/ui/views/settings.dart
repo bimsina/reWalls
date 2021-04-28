@@ -1,4 +1,3 @@
-import 'dart:io';
 import 'package:share/share.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
@@ -6,7 +5,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import '../../core/utils/dialog_utils.dart';
 import '../../core/utils/theme.dart';
-import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import '../widgets/card_with_children.dart';
 
 class SettingsPage extends StatefulWidget {
@@ -23,30 +21,6 @@ class _SettingsPageState extends State<SettingsPage>
           'https://play.google.com/store/apps/details?id=com.bimsina.re_walls',
       codeUrl = 'https://github.com/bimsina/reWalls',
       issuesUrl = 'https://github.com/bimsina/reWalls/issues';
-
-  @override
-  void initState() {
-    super.initState();
-    getCacheSize();
-  }
-
-  void getCacheSize() async {
-    final directory = Directory(await DefaultCacheManager().getFilePath());
-    if (directory.existsSync()) {
-      FileStat fileStat = directory.statSync();
-      cacheSize = '${(fileStat.size / 1024.0)} MB';
-      setState(() {});
-    }
-  }
-
-  clearCache() async {
-    try {
-      await DefaultCacheManager().emptyCache();
-    } catch (e) {
-      print(e);
-    }
-    getCacheSize();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -69,22 +43,6 @@ class _SettingsPageState extends State<SettingsPage>
                 subtitle: 'Select the way you app looks.',
                 onTap: () {
                   showThemeChangerDialog(context);
-                },
-              ),
-            ],
-          ),
-          CardWithChildren(
-            title: 'Nerd Stuff',
-            children: <Widget>[
-              CustomListTile(
-                title: 'Clear Cache',
-                icon: Icons.memory,
-                subtitle: 'Total Cache Size : $cacheSize',
-                onTap: () async {
-                  if (await showConfirmationDialog(context, 'Are you sure?',
-                      'Are you sure you want to clear cache?')) {
-                    clearCache();
-                  }
                 },
               ),
             ],

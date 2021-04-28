@@ -30,7 +30,7 @@ class _SubredditPageState extends State<SubredditPage> {
       isLoading = true;
     });
     filter = filter.toLowerCase();
-    http.get(EndPoints.getPosts(subreddit, filter)).then((res) {
+    http.get(Uri.parse(EndPoints.getPosts(subreddit, filter))).then((res) {
       if (res.statusCode == 200) {
         var decodeRes = jsonDecode(res.body);
         posts = [];

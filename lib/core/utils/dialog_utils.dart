@@ -4,7 +4,7 @@ import 'constants.dart';
 import 'theme.dart';
 
 void showLoadingDialog(BuildContext context) {
-  final stateData = Provider.of<ThemeNotifier>(context);
+  final stateData = Provider.of<ThemeNotifier>(context, listen: false);
   final ThemeData state = stateData.getTheme();
   showDialog(
       context: context,
@@ -47,7 +47,7 @@ void showAlertDialog(BuildContext context, String error, String title) {
         title: Text('$title'),
         content: Text(error),
         actions: <Widget>[
-          FlatButton(
+          TextButton(
             child: Text('Okay', style: TextStyle(color: Colors.blue)),
             onPressed: () => Navigator.pop(context),
           )
@@ -73,14 +73,14 @@ showConfirmationDialog(
         title: Text('$title', style: state.textTheme.bodyText2),
         content: Text(content, style: state.textTheme.bodyText1),
         actions: <Widget>[
-          FlatButton(
+          TextButton(
             child: Text('Yes', style: TextStyle(color: state.accentColor)),
             onPressed: () {
               confirm = true;
               Navigator.pop(context);
             },
           ),
-          FlatButton(
+          TextButton(
             child: Text('No', style: TextStyle(color: state.accentColor)),
             onPressed: () {
               confirm = false;

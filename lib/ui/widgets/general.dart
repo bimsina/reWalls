@@ -136,7 +136,7 @@ class _SubredditAddWidgetState extends State<SubredditAddWidget> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                FlatButton(
+                TextButton(
                   child: Text(
                     'Cancel',
                     style: themeData.textTheme.bodyText1,
@@ -168,7 +168,7 @@ class _SubredditAddWidgetState extends State<SubredditAddWidget> {
     setState(() {
       isLoading = true;
     });
-    http.get(subreddit).then((res) async {
+    http.get(Uri.parse(subreddit)).then((res) async {
       if (res.statusCode == 200) {
         Map<String, dynamic> decodeRes = jsonDecode(res.body);
         print(decodeRes);
@@ -215,9 +215,8 @@ class ErrorOccured extends StatelessWidget {
             'Oops! something went wrong.',
             style: _themeData.textTheme.bodyText1,
           ),
-          RaisedButton(
+          ElevatedButton(
             onPressed: onTap,
-            color: _themeData.accentColor,
             child: Text('Retry',
                 style: _themeData.textTheme.bodyText1.copyWith(
                   color: _themeData.primaryColor,

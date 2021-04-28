@@ -11,7 +11,7 @@ void main() {
     int theme = prefs.getInt('theme') ?? 1;
     runApp(
       ChangeNotifierProvider<ThemeNotifier>(
-        builder: (_) => ThemeNotifier(themes[theme]),
+        create: (_) => ThemeNotifier(themes[theme]),
         child: MaterialApp(
           theme: themes[theme],
           title: 'reWalls',

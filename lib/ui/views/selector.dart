@@ -170,7 +170,7 @@ class _SelectorWidgetState extends State<SelectorWidget> {
           Row(
             children: <Widget>[
               Expanded(
-                child: FlatButton(
+                child: TextButton(
                   child: Text(
                     'OK',
                     style: widget.themeData.textTheme.bodyText2
@@ -187,7 +187,7 @@ class _SelectorWidgetState extends State<SelectorWidget> {
                 ),
               ),
               Expanded(
-                child: FlatButton(
+                child: TextButton(
                   child: Text(
                     'Cancel',
                     style: widget.themeData.textTheme.bodyText2

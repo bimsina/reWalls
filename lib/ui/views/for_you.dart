@@ -36,7 +36,7 @@ class _ForYouState extends State<ForYou>
     setState(() {
       _fetchState = kdataFetchState.IS_LOADING;
     });
-    http.get(subreddit).then((res) {
+    http.get(Uri.parse(subreddit)).then((res) {
       if (res.statusCode == 200) {
         var decodeRes = jsonDecode(res.body);
         posts = [];

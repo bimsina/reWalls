@@ -43,7 +43,7 @@ class CarouselWallpaperState extends ChangeNotifier {
     _fetchState = kdataFetchState.IS_LOADING;
     notifyListeners();
     try {
-      http.get(subreddit).then((res) {
+      http.get(Uri.parse(subreddit)).then((res) {
         if (res.statusCode == 200) {
           var decodeRes = jsonDecode(res.body);
           _posts = [];

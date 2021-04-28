@@ -22,7 +22,7 @@ class Data {
   Data.fromJson(Map<String, dynamic> json) {
     modhash = json['modhash'];
     if (json['children'] != null) {
-      children = new List<Children>();
+      children = [];
       json['children'].forEach((v) {
         children.add(new Children.fromJson(v));
       });
@@ -89,7 +89,7 @@ class Preview {
 
   Preview.fromJson(Map<String, dynamic> json) {
     if (json['images'] != null) {
-      images = new List<Images>();
+      images = [];
       json['images'].forEach((v) {
         images.add(new Images.fromJson(v));
       });
@@ -109,7 +109,7 @@ class Images {
     source =
         json['source'] != null ? new Source.fromJson(json['source']) : null;
     if (json['resolutions'] != null) {
-      resolutions = new List<Resolutions>();
+      resolutions = [];
       json['resolutions'].forEach((v) {
         resolutions.add(new Resolutions.fromJson(v));
       });

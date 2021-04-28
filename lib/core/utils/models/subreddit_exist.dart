@@ -21,7 +21,7 @@ class SubredditTestClassData {
   });
   SubredditTestClassData.fromJson(Map<String, dynamic> json) {
     if (json['children'] != null) {
-      children = new List<Child>();
+      children = [];
       json['children'].forEach((v) {
         children.add(new Child.fromJson(v));
       });

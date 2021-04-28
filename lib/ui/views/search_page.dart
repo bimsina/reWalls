@@ -11,7 +11,6 @@ class WallpaperSearch extends SearchDelegate<void> {
     assert(context != null);
     final ThemeData theme = themeData.copyWith(
         hintColor: themeData.accentColor,
-        cursorColor: themeData.accentColor,
         primaryColor: themeData.primaryColor,
         textTheme: TextTheme(
           headline6: themeData.textTheme.bodyText1,

@@ -70,10 +70,12 @@ class _NewWallpapersState extends State<NewWallpapers>
                     },
                   ),
                   CarouselSlider(
-                    enlargeCenterPage: true,
-                    autoPlay: true,
-                    height: 250.0,
-                    viewportFraction: 0.7,
+                    options: CarouselOptions(
+                      enlargeCenterPage: true,
+                      autoPlay: true,
+                      height: 250.0,
+                      viewportFraction: 0.7,
+                    ),
                     items: posts.map((post) {
                       return Builder(
                         builder: (BuildContext context) {
